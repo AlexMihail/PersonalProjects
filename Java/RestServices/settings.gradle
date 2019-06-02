@@ -1,0 +1,4 @@
+rootProject.name = 'RestServices'
+include 'Model'
+include 'Persistance'
+

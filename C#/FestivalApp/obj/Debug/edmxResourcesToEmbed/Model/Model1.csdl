@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Spectacols" Relationship="Self.FK_Spectacol_0_0" FromRole="Artist" ToRole="Spectacol" />
+  </EntityType>
+  <EntityType Name="Spectacol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="locatie" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="locuriTotale" Type="Int64" />
+    <Property Name="locuriOcupate" Type="Int64" />
+    <Property Name="idArtist" Type="Int64" />
+    <NavigationProperty Name="Artist" Relationship="Self.FK_Spectacol_0_0" FromRole="Spectacol" ToRole="Artist" />
+  </EntityType>
+  <Association Name="FK_Spectacol_0_0">
+    <End Role="Artist" Type="Self.Artist" Multiplicity="0..1" />
+    <End Role="Spectacol" Type="Self.Spectacol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artist">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Spectacol">
+        <PropertyRef Name="idArtist" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mainEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Artists" EntityType="Self.Artist" />
+    <EntitySet Name="Spectacols" EntityType="Self.Spectacol" />
+    <AssociationSet Name="FK_Spectacol_0_0" Association="Self.FK_Spectacol_0_0">
+      <End Role="Artist" EntitySet="Artists" />
+      <End Role="Spectacol" EntitySet="Spectacols" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

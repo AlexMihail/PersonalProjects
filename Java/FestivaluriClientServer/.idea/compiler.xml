@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Client_main" target="1.8" />
+      <module name="Client_test" target="1.8" />
+      <module name="Common_main" target="1.8" />
+      <module name="Common_test" target="1.8" />
+      <module name="FestivaluriClientServer_main" target="1.8" />
+      <module name="FestivaluriClientServer_test" target="1.8" />
+      <module name="Networking_main" target="1.8" />
+      <module name="Networking_test" target="1.8" />
+      <module name="Server_main" target="1.8" />
+      <module name="Server_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

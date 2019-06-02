@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client_main.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Client/Client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Client/Client_test.iml" group="Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Common/Common.iml" filepath="$PROJECT_DIR$/.idea/modules/Common/Common.iml" group="Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Common/Common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Common/Common_main.iml" group="Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Common/Common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Common/Common_test.iml" group="Common" />
+      <module fileurl="file://$PROJECT_DIR$/FestivaluriClientServer.iml" filepath="$PROJECT_DIR$/FestivaluriClientServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FestivaluriClientServer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FestivaluriClientServer_main.iml" group="FestivaluriClientServer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FestivaluriClientServer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FestivaluriClientServer_test.iml" group="FestivaluriClientServer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Networking/Networking.iml" filepath="$PROJECT_DIR$/.idea/modules/Networking/Networking.iml" group="Networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Networking/Networking_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Networking/Networking_main.iml" group="Networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Networking/Networking_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Networking/Networking_test.iml" group="Networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server.iml" group="Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server_main.iml" group="Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Server/Server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Server/Server_test.iml" group="Server" />
+    </modules>
+  </component>
+</project>

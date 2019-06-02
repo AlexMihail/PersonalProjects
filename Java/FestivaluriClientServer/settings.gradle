@@ -1,0 +1,6 @@
+rootProject.name = 'FestivaluriClientServer'
+include 'Client'
+include 'Server'
+include 'Networking'
+include 'Common'
+

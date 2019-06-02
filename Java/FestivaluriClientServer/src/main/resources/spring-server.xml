@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <bean id="angajatRepo" class="Repository.AngajatDBRepository"/>
+    <bean id="spectacolRepo" class="Repository.SpectacolDBRepository"/>
+    <bean id="bileteRepo" class="Repository.BiletDBRepository"/>
+    <bean id="artistiRepo" class="Repository.ArtistDBRepository"/>
+
+    <bean id="festivaluriService" class="Service.ServerImpl">
+        <constructor-arg ref="angajatRepo"/>
+        <constructor-arg ref="bileteRepo"/>
+        <constructor-arg ref="spectacolRepo"/>
+        <constructor-arg ref="artistiRepo"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+
+        <property name="serviceName" value="Chat"/>
+        <property name="service" ref="festivaluriService"/>
+        <property name="serviceInterface" value="Utils.IServer"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+
+
+</beans>

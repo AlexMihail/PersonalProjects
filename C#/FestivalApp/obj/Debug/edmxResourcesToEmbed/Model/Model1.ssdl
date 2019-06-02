@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mainModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=/Users/Alex/IdeaProjects/Databases/FestivaluriDB.db;version=3" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityType Name="Spectacol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="locatie" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="data" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="locuriTotale" Type="integer" />
+    <Property Name="locuriOcupate" Type="integer" />
+    <Property Name="idArtist" Type="integer" />
+  </EntityType>
+  <Association Name="FK_Spectacol_0_0">
+    <End Role="Artist" Type="Self.Artist" Multiplicity="0..1" />
+    <End Role="Spectacol" Type="Self.Spectacol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artist">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Spectacol">
+        <PropertyRef Name="idArtist" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mainModelStoreContainer">
+    <EntitySet Name="Artist" EntityType="Self.Artist" store:Type="Tables" />
+    <EntitySet Name="Spectacol" EntityType="Self.Spectacol" store:Type="Tables" />
+    <AssociationSet Name="FK_Spectacol_0_0" Association="Self.FK_Spectacol_0_0">
+      <End Role="Artist" EntitySet="Artist" />
+      <End Role="Spectacol" EntitySet="Spectacol" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

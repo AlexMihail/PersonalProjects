@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mainModelStoreContainer" CdmEntityContainer="mainEntities1">
+    <EntitySetMapping Name="Artists">
+      <EntityTypeMapping TypeName="mainModel.Artist">
+        <MappingFragment StoreEntitySet="Artist">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spectacols">
+      <EntityTypeMapping TypeName="mainModel.Spectacol">
+        <MappingFragment StoreEntitySet="Spectacol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="locatie" ColumnName="locatie" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="locuriTotale" ColumnName="locuriTotale" />
+          <ScalarProperty Name="locuriOcupate" ColumnName="locuriOcupate" />
+          <ScalarProperty Name="idArtist" ColumnName="idArtist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
